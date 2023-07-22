@@ -1,4 +1,6 @@
-# Design a Food Ordering app for a restaurant:              
+# Design a Food Ordering app for a restaurant:
+# Name: Vishwas G 
+# Batch Code: DS190523              
 
 welcome = input("Welcome to ABC restaurant, if you are new user type yes or no: " )
 
