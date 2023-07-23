@@ -138,7 +138,11 @@ print("The order will be delivered to the addres : ",Address2)
 #---------------------------------------------------------------------------------------------------------------
 
 # ---ADMIN_USER (Code)---
+
 # In this code the Admin will login and ckeck the Stock of remaining items.
+# Here Admin name is: Vishwas G 
+# Amin Password is: ABC@123
+
 name1 = input("Enter admin name: ")
 while True:
         Password = input("Enter the Admin Password: ")
