@@ -21,7 +21,7 @@ if welcome == "yes":
             break
         else:
             print("Set correct Password!, Click on Password Criteria")  
-            print("Password must consist: One capital letter, one special char like $,@,&, and numerical char")
+            print("Password must have the combination of : capital letter, special char like $,@,&, and numerical char")
     
 elif welcome == "no":
     while True:
