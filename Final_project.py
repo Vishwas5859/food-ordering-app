@@ -34,20 +34,25 @@ elif welcome == "no":
         else:
             print("Enter correct Password!")  
 
-Address2 = "House No. 123, Flower street, Block 2"
+Address2 = "House No. 123, Block 2, Lake view park"
 
 #-------------------------------------------------------------------------------------------------------
 
 from datetime import date
 from datetime import datetime
-order_history1 = "['Tandoori Chicken (4 pieces)','Truffle Cake', 'Orange Juice'] on 2023-03-12"
-order_history2 = "['Tandoori Chicken (4 pieces)','Hot Chocolate Fudge'] on 2023-05-22"
+order_history1 = "['Tandoori Chicken (4 pcs)','Truffle Cake', 'Orange Juice'] on 2023-03-12"
+order_history2 = "['Tandoori Chicken (4 pcs)','Hot Chocolate Fudge'] on 2023-05-22"
 
 Discount_alloted = 0.05 # 5% Discount based on previous orders.
 to_see_order_history = input("Do you want to see your Order History, Click yes or no: ")
 
-food = ['Vegan Burger','Tandoori Chicken (4 pieces)', 'Truffle Cake']
+food = ['Vegan Burger','Tandoori Chicken (4 pcs)', 'Truffle Cake']  # food and prices are arranged in arrays.
 price = [240,320,900]
+
+# Defining Stock in Quantity of respective items
+Vegan_Burger_stock = 180
+Tandoori_Chicken_stock = 150
+Truffle_Cake_stock = 60
 
 
 if to_see_order_history == "yes":
@@ -63,12 +68,12 @@ Qty = []
 counter = 0
 total = 0
 
-order = input("Can i take your order? yes/no: ")
+order = input("Can i take your order? type yes/no: ")
 
 if order == "no":
     exit()
 else:
-    print("Thank you,Today's menu is: ",food)    
+    print("Thank you // Today's menu is: ",food)    
 
 
 Next_order = True
@@ -84,7 +89,7 @@ while Next_order == True:
         counter = counter +1
         total = total+(price[0]) * int(Quantity1)
         
-    elif food_order == 'Tandoori Chicken (4 pieces)':
+    elif food_order == 'Tandoori Chicken (4 pcs)':
         myordered_food.append(food[1])
         myodered_cost.append(price[1])
         Quantity2 = input("Enter the quantity of Tandoori Chicken: ")
@@ -104,7 +109,7 @@ while Next_order == True:
     else:
         print("Not in menu")  
 
-    finished = input("Have you finished ordering yes/no ")
+    finished = input("Have you finished ordering - type yes/no: ")
     if finished == "no":
         Next_order = True
     else:
@@ -128,11 +133,12 @@ print("The Total cost is: Rs",str(total),"Date & Time: " ,date.today(),"|", now.
 print("Price after discount is:Rs",str(total - total*Discount_alloted)," Date & Time: ",date.today(),"|",now.strftime("%H:%M"))
 print("           ")
 print("--THANK YOU--")
-print("The order will be delivered to the addres ",Address2)
+print("The order will be delivered to the addres : ",Address2)
 
 #---------------------------------------------------------------------------------------------------------------
 
-# ADMIN (Code) --
+# ---ADMIN_USER (Code)---
+# In this code the Admin will login and ckeck the Stock of remaining items.
 name1 = input("Enter admin name: ")
 while True:
         Password = input("Enter the Admin Password: ")
@@ -144,6 +150,15 @@ while True:
             break
         else:
             print("Enter correct Password!")  
+
+remaining_stock1 = (Vegan_Burger_stock - int(Quantity1))
+print("Remaining Vegan Burger Stock is: ", remaining_stock1)  
+
+remaining_stock2 = (Tandoori_Chicken_stock - int(Quantity2))
+print("Remaining Tandoori Chicken Stock is: ", remaining_stock2)
+
+remaining_stock3 = (Truffle_Cake_stock - int(Quantity3))
+print("Remaining Truffle Cake Stock is: ", remaining_stock3)
 
 #-------------------------------------------------------------------------------------------------------------
 
