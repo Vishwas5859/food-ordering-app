@@ -43,7 +43,7 @@ from datetime import datetime
 order_history1 = "['Tandoori Chicken (4 pcs)','Truffle Cake', 'Orange Juice'] on 2023-03-12"
 order_history2 = "['Tandoori Chicken (4 pcs)','Hot Chocolate Fudge'] on 2023-05-22"
 
-Discount_alloted = 0.05 # 5% Discount based on previous orders.
+Discount_alloted = 0.05 # 5% Discount on today's order.
 to_see_order_history = input("Do you want to see your Order History, Click yes or no: ")
 
 food = ['Vegan Burger','Tandoori Chicken (4 pcs)', 'Truffle Cake']  # food and prices are arranged in arrays.
